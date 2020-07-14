@@ -25,7 +25,7 @@ Stretch Goals:
    * `push` adds an item to the top of the stack.
    * `pop` removes and returns the element at the top of the stack
    * `len` returns the number of elements in the stack.
-
+[done]
 ### Queues
  * Has the methods: `enqueue`, `dequeue`, and `len`.
    * `enqueue` adds an element to the back of the queue.
@@ -33,7 +33,7 @@ Stretch Goals:
    * `len` returns the number of elements in the queue.
  
 ![Image of Queue](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/600px-Data_Queue.svg.png)
-
+[done]
 ### Doubly Linked Lists
  * The `ListNode` class, which represents a single node in the doubly-linked list, has already been implemented for you. Inspect this code and try to understand what it is doing to the best of your ability.
  * The `DoublyLinkedList` class itself should have the methods: `add_to_head`, `add_to_tail`, `remove_from_head`, `remove_from_tail`, `move_to_front`, `move_to_end`, `delete`, and `get_max`.
