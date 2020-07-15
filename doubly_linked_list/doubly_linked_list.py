@@ -84,7 +84,7 @@ class DoublyLinkedList:
     """
     Removes the List's current tail node, making the 
     current tail's previous node the new tail of the List.
-    Returns the value of the removed Node.#
+    Returns the value of the removed Node.
     """
     def remove_from_tail(self):
         current_tail = self.tail
@@ -121,41 +121,62 @@ class DoublyLinkedList:
         self.tail.next = node
         node.prev = self.tail
         self.tail = node
-        
+        #counter
+        self.length +=1
+       
 
     """
     Deletes the input node from the List, preserving the 
     order of the other elements of the List.#
     """
     def delete(self, node):
-        if self.tail == node and self.head == node:
-            #checks tail and head
-            self.head = None
-            self.tail = None
-            return
-        if self.tail == node:
-            self.tail = node.prev
-            node.prev.next = None
-            return
-        if self.head == node:
-            self.head = node.next
-            node.next.prev = None
-            return
-        x = self.head
-        while x.next is not None:
-            if x.value == x:
-                break
-            x = x.next
-        if x.next is not None:
-            node.prev.next = node.next
-            node.next.prev = node.prev
-        else:
-            if x.value == x:
-                x.value = None
-            #counter
-            self.length -=1    
-            return
+        #if not pointing to anything then none
+        # if self.tail == node and self.head == node:
+        #     self.head = None
+        #     self.tail = None
+        #     return
+        # elif self.tail == node:
+        #     self.tail = node.prev
+        #     node.prev.next = None
+        #     return
+        # if self.head == node:
+        #     self.head = node.next
+        #     node.next.prev = None
+        #     return
+        # else:
+        #     node.prev.next = node.next
+        #     node.next.prev = node.prev
+        #     node.next = None
+        #     node.prev = None
+        #     return
             
+       cur = self.head
+       while cur:
+           #single element condition in the list
+            if self.tail == node and self.head  == node:
+                self.head = None
+                self.tail = None
+                #counter
+                self.length -=1
+                return None
+            #if the node is the tail remove
+            elif self.tail == node:
+                return(self.remove_from_tail())
+            #if the node is the head remove 
+            elif self.head == node:
+                return(self.remove_from_head())
+            elif cur == node:
+                node.prev.next = node.next
+                node.next.prev = node.prev
+                #counter
+                self.length -=1
+            cur = cur.next    
+
+            
+
+
+
+
     """
     Finds and returns the maximum value of all the nodes 
     in the List.
