@@ -30,11 +30,11 @@ Answer the following questions for each of the data structures you implemented a
 
 ## Doubly Linked List
 
-1. What is the runtime complexity of `ListNode.insert_after`?
+1. What is the runtime complexity of `ListNode.insert_after`?O(1)
 
-2. What is the runtime complexity of `ListNode.insert_before`?
+2. What is the runtime complexity of `ListNode.insert_before`?O(1)
 
-3. What is the runtime complexity of `ListNode.delete`?
+3. What is the runtime complexity of `ListNode.delete`?O(1)
 
 4. What is the runtime complexity of `DoublyLinkedList.add_to_head`?O(1)
 
@@ -54,13 +54,13 @@ Answer the following questions for each of the data structures you implemented a
 Array.splice in JS would be a worst case of 0(n) which means delete runs faster
 ## Binary Search Tree
 
-1. What is the runtime complexity of `insert`? 
+1. What is the runtime complexity of `insert`? o(n) worst cast o(log(n)) avg case
 
-2. What is the runtime complexity of `contains`?
+2. What is the runtime complexity of `contains`?o(n) worst cast o(log(n)) avg case
 
-3. What is the runtime complexity of `get_max`? 
+3. What is the runtime complexity of `get_max`? o(n) worst cast o(log(n)) avg case
 
-4. What is the runtime complexity of `for_each`?
+4. What is the runtime complexity of `for_each`? o(n)
     
 ## Heap
 

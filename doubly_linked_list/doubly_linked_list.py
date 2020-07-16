@@ -44,6 +44,22 @@ class DoublyLinkedList:
         if self.tail is None:
             #order matters move things right to left
             self.tail = self.head
+
+#  def add_to_head(self, value):
+#         new_node = ListNode(value)
+#         self.length += 1
+#         if not self.head and not self.tail:
+#             self.head = new_node
+#             self.tail = new_node
+#         else:
+#             new_node.next = self.head
+#             self.head.prev = new_node
+#             self.head = new_node
+
+
+
+
+
     """
     Removes the List's current head node, making the
     current head's next node the new head of the List.
@@ -53,6 +69,8 @@ class DoublyLinkedList:
         if self.head is None:
             return
         else:
+            #counter
+            self.length -=1 
             x = self.head.value
             #more then 1 in the list
             if self.head is not self.tail:
@@ -62,8 +80,7 @@ class DoublyLinkedList:
             else:
                 self.head = None
                 self.tail = None
-        #counter
-        self.length -=1       
+              
         return x   
     """
     Wraps the given value in a ListNode and inserts it 
@@ -130,7 +147,7 @@ class DoublyLinkedList:
     order of the other elements of the List.#
     """
     def delete(self, node):
-        #if not pointing to anything then none
+        # #if not pointing to anything then none not working
         # if self.tail == node and self.head == node:
         #     self.head = None
         #     self.tail = None
@@ -150,7 +167,7 @@ class DoublyLinkedList:
         #     node.prev = None
         #     return
             
-       cur = self.head
+       cur = self.head # working but not the fast way to do this
        while cur:
            #single element condition in the list
             if self.tail == node and self.head  == node:
@@ -171,11 +188,6 @@ class DoublyLinkedList:
                 #counter
                 self.length -=1
             cur = cur.next    
-
-            
-
-
-
 
     """
     Finds and returns the maximum value of all the nodes 
