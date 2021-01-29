@@ -25,7 +25,7 @@ Stretch Goals:
    * `push` adds an item to the top of the stack.
    * `pop` removes and returns the element at the top of the stack
    * `len` returns the number of elements in the stack.
-
+[done]
 ### Queues
  * Has the methods: `enqueue`, `dequeue`, and `len`.
    * `enqueue` adds an element to the back of the queue.
@@ -33,7 +33,7 @@ Stretch Goals:
    * `len` returns the number of elements in the queue.
  
 ![Image of Queue](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/600px-Data_Queue.svg.png)
-
+[done]
 ### Doubly Linked Lists
  * The `ListNode` class, which represents a single node in the doubly-linked list, has already been implemented for you. Inspect this code and try to understand what it is doing to the best of your ability.
  * The `DoublyLinkedList` class itself should have the methods: `add_to_head`, `add_to_tail`, `remove_from_head`, `remove_from_tail`, `move_to_front`, `move_to_end`, `delete`, and `get_max`.
@@ -48,7 +48,7 @@ Stretch Goals:
  * The `head` property is a reference to the first node and the `tail` property is a reference to the last node.
  
 ![Image of Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/610px-Doubly-linked-list.svg.png)
-
+[done]
 ### Binary Search Trees
 * Should have the methods `insert`, `contains`, `get_max`.
   * `insert` adds the input value to the binary search tree, adhering to the rules of the ordering of elements in a binary search tree.
@@ -57,7 +57,7 @@ Stretch Goals:
   * `for_each` performs a traversal of _every_ node in the tree, executing the passed-in callback function on each tree node value. There is a myriad of ways to perform tree traversal; in this case any of them should work. 
 
 ![Image of Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png)
-
+[done]
 ---
 
 Once you've gotten the tests passing, it's time to analyze the runtime complexity of your `get` and `set` operations. There's a way to get both operations down to sub-linear time. In fact, we can get them each down to constant time by picking the right data structures to use. 

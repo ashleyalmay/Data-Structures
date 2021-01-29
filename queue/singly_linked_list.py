@@ -1,20 +1,3 @@
-class Node:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next_node = next
-
-    def get_value(self):
-        # returns the node's data 
-        return self.value
-
-    def get_next(self):
-        # returns the thing pointed at by this node's `next` reference 
-        return self.next_node
-
-    def set_next(self, new_next):
-        # sets this node's `next` reference to `new_next`
-        self.next_node = new_next
-
 class LinkedList:
     def __init__(self):
         # the first Node in the LinkedList
@@ -131,10 +114,28 @@ class LinkedList:
     def __len__(self):
         if not self.head:
             return 0
+        count = 1    
         current = self.head
-        count = 0
+        
         while current is not None:
             count += 1
             current = current.next
-            return current
-     
+            return current        
+
+
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next_node = next
+
+    def get_value(self):
+        # returns the node's data 
+        return self.value
+
+    def get_next(self):
+        # returns the thing pointed at by this node's `next` reference 
+        return self.next_node
+
+    def set_next(self, new_next):
+        # sets this node's `next` reference to `new_next`
+        self.next_node = new_next
